@@ -7,13 +7,13 @@
         <div>
             <?php
             $validation = unserialize(Session::get('validation'));
-            if (!empty($validation)) {
-                foreach ($validation->getErrors() as $error) {
+            if (!empty($validation)):
+                foreach ($validation->getErrors() as $error):
                     ?>
                     <p style="color: red">* <?= $error ?></p>
-                    <?
-                }
-            }
+                    <?php
+                endforeach;
+            endif;
             ?>
             <form action="" method="POST">
                 <div>Email: <input type="text" name="email"></div>

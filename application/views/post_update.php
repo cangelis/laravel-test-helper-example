@@ -17,7 +17,7 @@
                 foreach ($validation->getErrors() as $error):
                     ?>
                     <p style="color: red">* <?= $error ?></p>
-                    <?
+                    <?php
                 endforeach;
             endif;
             ?>
